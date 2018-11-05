@@ -23,7 +23,7 @@ module.exports = function(environment) {
       API_HOST: 'https://vlctechhub-api.herokuapp.com'
     },
     fastboot: {
-      hostWhitelist: [/^vlctechhub-fastboot.herokuapp.com$/, /^localhost:\d+$/]
+      hostWhitelist: ['vlctechhub-fastboot.herokuapp.com', /^localhost:\d+$/]
     }
   };
 
