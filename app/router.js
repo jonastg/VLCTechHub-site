@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('events', function() {
+    this.route('show', { path: '/:slug'} );
+  });
 });
 
 export default Router;

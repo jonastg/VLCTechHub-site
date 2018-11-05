@@ -20,6 +20,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      API_HOST: 'https://vlctechhub-api.herokuapp.com'
+    },
+    fastboot: {
+      hostWhitelist: ['heroku.com', /^localhost:\d+$/]
     }
   };
 
@@ -29,6 +33,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+     ENV.APP.API_HOST = 'http://localhost:5000';
   }
 
   if (environment === 'test') {
@@ -36,11 +41,12 @@ module.exports = function(environment) {
     ENV.locationType = 'none';
 
     // keep test console output quieter
-    ENV.APP.LOG_ACTIVE_GENERATION = false;
-    ENV.APP.LOG_VIEW_LOOKUPS = false;
+    //ENV.APP.LOG_ACTIVE_GENERATION = false;
+    //ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
     ENV.APP.autoboot = false;
+    ENV.APP.API_HOST = 'http://localhost:4200';
   }
 
   if (environment === 'production') {
