@@ -1,20 +1,12 @@
 /* eslint-env node */
-
 const FastBootAppServer = require('fastboot-app-server');
 const ExpressHTTPServer = require('fastboot-app-server/src/express-http-server');
-const express = require('express');
 
-const httpServer = new ExpressHTTPServer(/* {options} */);
+const httpServer = new ExpressHTTPServer();
 const app = httpServer.app;
-let router = express.Router();
+const api = require('./api/index');
 
-console.log('router', router);
-
-router.get('/', function(req, res) {
-  res.json({ message: 'hooray! welcome to our api!' });
-});
-
-app.use('/api', router);
+app.use('/api', api);
 
 let server = new FastBootAppServer({
   httpServer: httpServer,
