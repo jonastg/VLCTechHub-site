@@ -2,6 +2,23 @@
 
 # compiled output
 /tmp/
+/dist/assets/test-support.css
+/dist/assets/test-support.js
+/dist/assets/test-support.map
+/dist/assets/tests.js
+/dist/assets/tests.map
+/dist/assets/vendor.css
+/dist/assets/vendor.js
+/dist/assets/vendor.map
+/dist/assets/vlctech-hub-fastboot.js
+/dist/assets/vlctech-hub-fastboot.map
+/dist/assets/vlctech-hub.css
+/dist/assets/vlctech-hub.css.map
+/dist/assets/vlctech-hub.js
+/dist/assets/vlctech-hub.map
+/dist/ember-welcome-page/
+/dist/testem.js
+/dist/tests/
 
 # dependencies
 /bower_components/
